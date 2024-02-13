@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    /* Color scheme */
+    --color-white: hsl(0, 0%, 100%);
+    --color-light-gray: hsl(212, 45%, 89%);
+    --color-grayish-blue: hsl(220, 15%, 55%);
+    --color-dark-blue: hsl(218, 44%, 22%);
+
+    /* Typography */
+    --font-family-outfit: 'Outfit', sans-serif;
+    --font-size-body: 15px;
+    --font-size-heading: 22px;
+    --font-size-attribution: 11px;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* Box shadow */
+    --box-shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* Border radius */
+    --border-radius-card: 1rem;
+    --border-radius-image: 8px;
+
+    /* Breakpoints */
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1440px;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-outfit);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--color-light-gray);
+    color: var(--color-dark-blue);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--box-shadow-card);
+    padding: 20px;
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.qrcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.qrcode img {
+    max-width: 80%;
+    height: auto;
+    border-radius: var(--border-radius-image);
+}
+
+.content {
+    text-align: left;
+    color: var(--color-grayish-blue);
+}
+
+.content h1 {
+    margin-top: 20px;
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-dark-blue);
+}
+
+.content p {
+    margin-top: 10px;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+}
+
+.attribution {
+    font-size: var(--font-size-attribution);
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (min-width: var(--breakpoint-md)) {
+    .card {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+    .card {
+        max-width: 600px;
+    }
+}
